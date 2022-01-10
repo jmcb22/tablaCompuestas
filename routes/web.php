@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.app');
 });
+
+Route::resource('libros', App\Http\Controllers\LibroController::class);
+Route::resource('categorias', App\Http\Controllers\CategoriaController::class);
